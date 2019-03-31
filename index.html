@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>current-tab</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/main.css" />
+    <link id="pagestyle" rel="stylesheet" type="text/css" media="screen" href="assets/css/light.css" />
+    <script src="assets/js/swap-stylesheet.js"></script>
+    
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>current-tab</h1>
+            <hr>
+            <button class="theme-button" id="light-btn" onclick="swapStyleSheet('assets/css/light.css')"> </button>
+            <button class="theme-button" id="dark-btn" onclick="swapStyleSheet('assets/css/dark.css')"> </button>
+        </div>
+        <h3 class="section-title">Apps</h3>
+        <div class="row">
+            <div class="col">
+                <div class="app-item highlight">
+                    <a href="#">
+                        <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAUEBAAAACwAAAAAAQABAACAkQBADs=">
+                        <h4>App Title</h4>
+                        <p>app.example.local</p>
+                    </a>
+                </div>
+            </div>
+            <div class="col">
+                <div class="app-item highlight">
+                    <a href="#">
+                        <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAUEBAAAACwAAAAAAQABAACAkQBADs=">
+                        <h4>App Title</h4>
+                        <p>app.example.local</p>
+                    </a>
+                </div>
+            </div>
+            <div class="col">
+                <div class="app-item highlight">
+                    <a href="#">
+                        <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAUEBAAAACwAAAAAAQABAACAkQBADs=">
+                        <h4>App Title</h4>
+                        <p>app.example.local</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <h3 class="section-title">Favorites</h3>
+        <div class="row">
+            <div class="col">
+                <div class="fav-link highlight">
+                    <a href="https://example.com"><img src="https://www.google.com/s2/favicons?domain=https://example.com"> Example.com</a>
+                </div>
+            </div>
+            <div class="col">
+                <div class="fav-link highlight">
+                    <a href="https://example.com"><img src="https://www.google.com/s2/favicons?domain=https://example.com"> Example.com</a>
+                </div>
+            </div>
+            <div class="col">
+                <div class="fav-link highlight">
+                    <a href="https://example.com"><img src="https://www.google.com/s2/favicons?domain=https://example.com"> Example.com</a>
+                </div>
+            </div>
+            <div class="col">
+                <div class="fav-link highlight">
+                    <a href="https://example.com"><img src="https://www.google.com/s2/favicons?domain=https://example.com"> Example.com</a>
+                </div>
+            </div>
+            <div class="col">
+                <div class="fav-link highlight">
+                    <a href="https://example.com"><img src="https://www.google.com/s2/favicons?domain=https://example.com"> Example.com</a>
+                </div>
+            </div>
+            <div class="col">
+                <div class="fav-link highlight">
+                    <a href="https://example.com"><img src="https://www.google.com/s2/favicons?domain=https://example.com"> Example.com</a>
+                </div>
+            </div>
+            <div class="col">
+                <div class="fav-link highlight">
+                    <a href="https://example.com"><img src="https://www.google.com/s2/favicons?domain=https://example.com"> Example.com</a>
+                </div>
+            </div>
+        </div>
+        <h3 class="section-title">Widgets</h3>
+        <div class="row">
+            <div class="col">
+                <div class="widget highlight">
+                    <h4>Text Widget</h4>
+                    <p>Example text widget. Example text widget. Example text widget.</p>
+                    
+                </div>
+            </div>
+            <div class="col">
+                <div class="widget highlight">
+                    <h4>Time Widget</h4>
+                    <div id="clockbox"></div>
+                    <script type="text/javascript">
+                        var tday=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+                        var tmonth=["January","February","March","April","May","June","July","August","September","October","November","December"];
+                        
+                        function GetClock(){
+                        var d=new Date();
+                        var nday=d.getDay(),nmonth=d.getMonth(),ndate=d.getDate(),nyear=d.getFullYear();
+                        var nhour=d.getHours(),nmin=d.getMinutes(),nsec=d.getSeconds(),ap;
+                        
+                        if(nhour==0){ap=" AM";nhour=12;}
+                        else if(nhour<12){ap=" AM";}
+                        else if(nhour==12){ap=" PM";}
+                        else if(nhour>12){ap=" PM";nhour-=12;}
+                        
+                        if(nmin<=9) nmin="0"+nmin;
+                        if(nsec<=9) nsec="0"+nsec;
+                        
+                        var clocktext=""+tday[nday]+", "+tmonth[nmonth]+" "+ndate+", "+nyear+" <br> "+nhour+":"+nmin+":"+nsec+ap+"";
+                        document.getElementById('clockbox').innerHTML=clocktext;
+                        }
+                        
+                        GetClock();
+                        setInterval(GetClock,1000);
+                    </script>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

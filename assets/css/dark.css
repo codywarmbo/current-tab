@@ -1,0 +1,9 @@
+:root {
+    --bg:rgb(0, 0, 0);
+    --item:rgb(255, 255, 255);
+    --item-hover-bg:rgba(255,255,255,.1);
+}
+
+.app-item img {
+    filter:invert(1);
+}

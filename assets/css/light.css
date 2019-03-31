@@ -1,0 +1,5 @@
+:root {
+    --bg:rgb(255,255,255);
+    --item:rgb(0,0,0);
+    --item-hover-bg:rgba(0,0,0,.05);
+}
